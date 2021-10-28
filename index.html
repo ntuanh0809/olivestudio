@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olive Studio</title>
+    <style>
+        :root{
+            --maincolor:white;
+            --navmenuheight:115px;
+        }
+        *{
+            padding:0;
+            margin:0 auto;
+            box-sizing: border-box;
+        }
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        body{
+            width: 1360px;
+            background:white;
+            margin:0px auto;
+        
+        }
+        #main-menu{
+            height: var(--navmenuheight);
+            width: 1360px;
+        }
+        #main-menu .logo{
+            width: 418px;
+            height: 100%;
+            display: inline-block;
+            float:left;
+        }
+        #main-menu .logo>img{
+            margin:0;
+        }
+        #main-menu .menu{
+            height: 115px;
+            background:white;
+        }
+        #main-menu .menu>ul{
+            height: 100%;
+            list-style-type: none;
+            font-weight: bold;
+    
+        }
+        #main-menu .menu>ul>li{
+            height:100%;
+            float:left;
+            text-align: center;
+            line-height: 52px;
+            text-transform: uppercase;
+            font-size: 20px;
+            padding: 0 10px;
+            color: #221b23;
+            position: relative;
+            margin-right: 30px;
+            margin-top: 25px;
+        }
+        #main-menu .menu>ul>li:hover >a{
+            color: white;
+        }
+        #main-menu .menu>ul>li>ul{
+            list-style-type:none;
+            width:250px;
+            position: absolute;
+            z-index: 1;
+            left:0;
+            display:none;
+            background:var(--maincolor);
+        }
+        #main-menu .menu>ul>li:hover >ul{
+            display:block;
+            padding:8px 0;
+            animation: slide 1.5s;
+        }
+        #main-menu .menu>ul>li>ul>li{
+            font-size:20px;
+            text-transform: none;
+            font-weight: normal;
+            height: 35px;
+            line-height: 40px;
+            background:wheat;
+            text-align: left;
+            padding:0 10px;
+            position: relative;
+        }
+        #main-menu .menu>ul>li>ul>li:hover>a{
+            color:black;
+            font-weight: bold;
+        }
+        #main-menu .menu>ul>li>ul>li>a{
+            color:white;
+            text-decoration: none;
+        }
+        @keyframes slide {
+            0%{left:8px;}
+            20%{left:-6.5px;}
+            40%{left:5px;}
+            60%{left:-3.5px;}
+            80%{left:2px;}
+            100%{left:0;}
+        }
+        #bijin{
+            position: absolute;
+        }
+        #bijin-box {
+            text-align: center;
+            width: 1360px;
+        }
+        #bijin-box>img{
+            height: 592px;
+            width: 1360px;
+            margin-top: 10px;
+        }
+        #bijin-box button{
+            text-align: center;
+            height: 50px;
+            width: 160px;
+            font-size: 20px;
+            right: 20rem;
+            bottom: 7rem;
+            border-radius: 0.5rem;
+            color: #555252;
+            background-color: burlywood;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        #about-us{
+            position: absolute;
+            margin-top: 35px;
+            margin-bottom: 30px;
+        }
+        #about-us .content{
+            height: 200px;
+            width: 1360px;
+        }
+        #about-us .content .h1{
+            font-size: 30px;
+            font-family: wfont_f61af8_1b7afc90f48a4aae9bd20dacdb863439,wf_1b7;
+            color: #908D55;
+            letter-spacing: 0.15em;
+            font-weight: bold;
+            text-align: center;
+        }
+        #about-us .content .h2{
+            text-align: center;
+            font-family: wfont_c49c58_9cd7c8282fc84715a8618091bacf10d0,wf_9cd ;
+            line-height: 2em;
+            font-size: 20px;
+            color: #555252;
+        }
+        #about-us .left{
+            float: left;
+            margin-right: 40px;
+        }
+        #about-us .right{
+            float: left;
+        }
+        #about-us .left>img{
+            height: 432px;
+            width: 884px;
+            position: relative;
+            display: inline-block;
+        }
+        #about-us .right>img{
+            height: 432px;
+            width: 436px;
+            position: relative;
+            display: inline-block;
+        }
+        #services{
+            height: 1235px;
+            width: 1360px;
+            margin-top: 715px;
+        }
+        #services .order-online-here{
+            float:left;
+            margin-right: 41px;
+        }
+        #services .order-online-here>a>img{
+            height: 615px;
+            width: 385px;
+            position: relative;
+            display: inline-block;
+        }
+        #services .more-about-us{
+            float:left;
+            margin-right: 41px;
+        }
+        #services .more-about-us>a>img{
+            height: 615px;
+            width: 385px;
+            position: relative;
+            display: inline-block;
+        }
+        #services .customize-your-cake{
+            float:left;
+        }
+        #services .customize-your-cake>a>img{
+            height: 615px;
+            width: 508px;
+            position: relative;
+            display: inline-block;
+        }
+        #services .learn-more{
+            float:left;
+            margin-top: 40px;
+        }
+        #services .learn-more>a>img{
+            height: 580px;
+            width: 1360px;
+            position: relative;
+            display: inline-block;
+        }
+        #partners{
+            height: 228px;
+            width: 1360px;
+            margin-top: 30px;
+        }
+        #partners .title{
+            height: 26px;
+            font-family: wfont_f61af8_1b7afc90f48a4aae9bd20dacdb863439,wf_1b7;
+            color: #908D55;
+            letter-spacing: 0.3em;
+            font-size: 30px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        #partners>img{
+            height: 182px;
+            width: 1385px;
+            margin-top: 20px;
+        }
+        #instagram{
+            height: 240px;
+            width: 1360px;
+            margin-top: 30px;
+        }
+        #instagram .title{
+            height: 26px;
+            font-family: wfont_f61af8_1b7afc90f48a4aae9bd20dacdb863439,wf_1b7;
+            color: #908D55;
+            letter-spacing: 0.3em;
+            font-size: 30px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        #instagram .picture{
+            width: 1400px;
+            margin-top: 50px;
+            position: absolute;
+        }
+        #instagram .picture>img{
+            height: 263px;
+            width: 263px;
+            margin-right: 8px;
+            margin-bottom: 11px;
+        }
+        #footer{
+            height: 290px;
+            width: 1360px;
+            background-color: #DCDDCA;
+            margin-top: 410px;
+            position: relative;
+        }
+        #footer .footer-left{
+            height: 116px;
+            width: 600px;
+            margin-top: 60px;
+            margin-left: 100px;
+            float: left;
+        }
+        #footer .footer-left .p1{
+            font-family: futura-It-w01-light, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #footer .footer-left .p2{
+            font-family: futura-It-w01-light, sans-serif;
+            font-size: 16px;
+        }
+        #footer .footer-left>img{
+            height: 100px;
+            width: 200px;
+        }
+        #footer .footer-right{
+            margin-top: 60px;
+            margin-left: 100px;
+            height: 116px;
+            width: 500px;
+            float: left;
+        }
+        #footer .footer-right .Our-story{
+            width: 411px;
+        }
+        #footer .footer-right .Our-story .title{
+            font-family: futura-It-w01-book, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: #555252;
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        #footer .footer-right .Our-story .content{
+            margin-top: 15px;
+            font-family: futura-It-w01-light, sans-serif;
+            font-size: 15px;
+            text-decoration: #555252;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-menu">
+        <div class="logo">
+            <img src="./logo.jpg" alt="">
+        </div>    
+        <div class="menu">
+          <ul>
+            <li>About us
+                <ul>
+                    <li><a href="">History</a></li>
+                    <li><a href="">Stores</a></li>
+                </ul>
+            </li>
+            <li>Online Ordering
+                <ul>
+                    <li><a href="">Original Flavors</a></li>
+                    <li><a href="">Special Cake Designs</a></li>
+                    <li><a href="">Signature Cake Designs</a></li>
+                    <li><a href="">Premium Floral Cake Designs</a></li>
+                    <li><a href="">The Merrier Combo</a></li>
+                </ul>
+            </li>
+            <li>Service
+                <ul>
+                    <li><a href="">Parties</a></li>
+                    <li><a href="">Weddings</a></li>
+                    <li><a href="">Business Service</a></li>
+                </ul>
+            </li>
+            <li>More
+                <ul>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Blogs</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>     
+    </div>
+    <div id="bijin-box">
+        <a href=""></a><img src="./bijinbox.jpg" alt=""></a>
+        <a href="./Olive(1).html"><button>ORDER NOW</button></a>
+    </div>
+    <div id="about-us">
+        <div class="content">
+            <div class="h1">OLIVE STUDIO - TOP BAKESHOP IN HANOI</div>
+            <div class="h2">
+                Olive Studio was founded in 2016 by a passionate team. We love to create and bake good treats for family, friends and customers to enjoy.
+                It is all a long process from finding the right recipe, the right ingredients to the finished products to serve. Our customised and baked treats for any occasion are baked fresh daily, using only the best ingredients we can find so we can make sure that the cake you would receive is at its best. 
+            </div>
+        </div>
+        <div class="left">
+            <img src="./aboutus.jpg" alt="">
+        </div>
+        <div class="right">
+            <img src="./ẢNH 2.jpg" alt="">
+        </div>
+    </div>
+    <div id="services">
+        <div class="order-online-here">
+            <a href=""><img src="./ảnh 3.jpg" alt=""></a>
+        </div>
+        <div class="more-about-us">
+            <a href=""><img src="./ảnh 4.jpg" alt=""></a>
+        </div>
+        <div class="customize-your-cake">
+            <a href=""><img src="./ảnh 5.jpg" alt=""></a>
+        </div>
+        <div class="learn-more">
+            <a href=""><img src="./ảnh 6.jpg" alt=""></a>
+        </div>
+    </div>
+    <div id="partners">
+        <div class="title">OUR PARTNERS</div>
+        <img src="./ảnh 7.jpg" alt="">
+    </div>
+    <div id="instagram">
+        <div class="title">Follow us on instagram: @olivestudiovn
+        </div>
+        <div class="picture">
+            <img src="./insta1.jpg" alt="">
+            <img src="./insta2.jpg" alt="">
+            <img src="./insta3.jpg" alt="">
+            <img src="./insta4.jpg" alt="">
+            <img src="./insta5.jpg" alt="">
+            <img src="./insta6.jpg" alt="">
+            <img src="./insta7.jpg" alt="">
+            <img src="./insta8.jpg" alt="">
+            <img src="./insta9.jpg" alt="">
+            <img src="./insta10.jpg" alt="">
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer-left">
+            <p class="p1">© 2016 by Olive Studio Co. All Rights Reserved.</p>
+            <p class="p2">
+                <div class="address">Address: 267 Thai Ha Street, Dong Da District, Hanoi</div>
+                <div class="phone-number">Phone number: (84)968.603.639</div>
+            </p>
+            <img src="./logo(1).jpg" alt="">
+        </div>
+        <div class="footer-right">
+            <div class="Our-story">
+              <div class="title">Our Story</div>
+              <div class="content">Olive Studio is a Hanoi-based bakeshop, which is known for it’s elegant and delicious selection of freshly baked sweet treats and beautifully detailed custom cakes. Our custom and bakeshop treats are baked fresh daily, using only the best ingredients.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
